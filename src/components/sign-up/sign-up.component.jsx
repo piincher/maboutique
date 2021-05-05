@@ -60,15 +60,15 @@ class SignUp extends React.Component {
 					/>
 					<FormInput
 						type="text"
-						name="displayName"
+						name="email"
 						value={email}
 						onChange={this.handleChange}
-						label="displayName"
+						label="email"
 						required
 					/>
 					<FormInput
 						type="password"
-						name="displayName"
+						name="password"
 						value={password}
 						onChange={this.handleChange}
 						label="password"
