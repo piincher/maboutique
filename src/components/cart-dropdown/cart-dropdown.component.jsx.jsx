@@ -7,7 +7,8 @@ import CustomButton from '../../components/custom-button/custom-button.component
 import './cart-dropdown.styles.scss';
 import CartItem from '../cart-item/cart-item.component';
 import { selectCartItems } from '../../redux/cart/cart.selectors';
-const CartDropdown = ({ cartItems, history }) => (
+import { toggleCartHidden } from '../../redux/cart/cart.actions';
+const CartDropdown = ({ cartItems, history, dispatch }) => (
 	<div className="cart-dropdown">
 		<div className="cart-items">
 			{cartItems.length ? (
@@ -16,7 +17,15 @@ const CartDropdown = ({ cartItems, history }) => (
 				<span className="empty-message">your cart is empty</span>
 			)}
 		</div>
-		<CustomButton onClick={() => history.push('/checkout')}> Go Check out</CustomButton>{' '}
+		<CustomButton
+			onClick={() => {
+				history.push('/checkout');
+				dispatch(toggleCartHidden());
+			}}
+		>
+			{' '}
+			Go Check out
+		</CustomButton>{' '}
 	</div>
 );
 
