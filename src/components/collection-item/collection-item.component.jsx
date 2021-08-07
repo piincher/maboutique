@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addToCart } from '../../redux/cart/cart.actions';
+import { addItem } from '../../redux/cart/cart.actions';
 import CustomButton from '../custom-button/custom-button.component';
 import './collection-item.styles.scss';
 
@@ -26,6 +26,6 @@ const CollectionItem = ({ item, addToCart }) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-	addToCart: (item) => dispatch(addToCart(item))
+	addToCart: (item) => dispatch(addItem(item))
 });
 export default connect(null, mapDispatchToProps)(CollectionItem);
