@@ -47,3 +47,4 @@ provider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export default firebase;
+//pk_test_51JN05BJhsLAUagMJXmk0U8p8oQkNTecq9bU5x5PjxDTc8DRnrIyCw4XX60u35V89yzH6kFyHxEJ1JJ9NMCJ95Dd7009wP83Kd9
